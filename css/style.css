@@ -180,7 +180,7 @@ nav ul a.active{
 /* End Header */
 /* Start Home Section */
 .home{
-    background-image: url(../imgs/pexels-kindel-media-7527885.jpg);
+    background-image: url(../imgs/pexels-tima-miroshnichenko-5380596.jpg);
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -337,9 +337,6 @@ nav ul a.active{
     margin-bottom: 25px;
 }
 .skills-content .prograss .prog-text{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 15px;
     margin-bottom: 6px;
     text-transform: uppercase;
@@ -519,6 +516,7 @@ nav ul a.active{
 }
 .contact-item p{
     font-size: 14px;
+    color: #000;
 }
 /* End contact */
 /* End Main Section */
