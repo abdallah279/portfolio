@@ -10,9 +10,22 @@
     margin: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+html::-webkit-scrollbar {
+    width: 8px;
+}
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background-color: var(--main-color);
+}
+
 body{
     font-family: "Open Sans", sans-serif;
     color: #272829;
@@ -145,6 +158,7 @@ nav ul a:hover{
 }
 nav ul a.active{
     color: var(--main-color);
+    font-weight: 600;
 }
 
 @media (max-width: 991px) {
@@ -180,7 +194,7 @@ nav ul a.active{
 /* End Header */
 /* Start Home Section */
 .home{
-    background-image: url(../imgs/pexels-tima-miroshnichenko-5380596.jpg);
+    background-image: url(../imgs/pexels-pixabay-52732.jpg);
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -444,6 +458,22 @@ nav ul a.active{
 }
 .portfolio-content .port img{
     max-width: 100%;
+}
+.portfolio-content .port .content{
+    color: #fff;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    background-color: var(--sc-color);
+    padding: 8px 12px;
+    transition: all .3s;
+    border-radius: 5px;
+    z-index: 4;
+}
+.portfolio-content .port:hover .content{
+    top: 50%;
 }
 .portfolio-content .port .links{
     position: absolute;
