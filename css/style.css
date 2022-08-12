@@ -432,6 +432,53 @@ nav ul a.active{
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
 }
+.portfolio nav{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 45px;
+}
+.portfolio .items{
+    display: flex;
+    max-width: 460px;
+    width: 100%;
+    justify-content: space-between;
+}
+.portfolio .items span{
+    padding: 7px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--main-color);
+    border-radius: 50px;
+    border: 2px solid var(--main-color);
+    transition: all 0.3s ease;
+}
+.portfolio .items span.active,
+.portfolio .items span:hover{
+    color: #fff;
+    background: var(--main-color);
+}
+
+@media screen and (max-width:500px) {
+    .portfolio .items{
+        max-width: 380px;
+    }
+    .portfolio .items span{
+        padding: 7px 15px;
+    }
+}
+@media screen and (max-width:379px) {
+    .portfolio .items span{
+        padding: 7px 10px;
+    }
+}
+@media screen and (max-width:330px) {
+    .portfolio .items span{
+        padding: 5px;
+        font-size: 16px;
+    }
+}
+
 .portfolio-content{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -462,7 +509,7 @@ nav ul a.active{
 .portfolio-content .port .content{
     color: #fff;
     position: absolute;
-    top: -10%;
+    top: -20%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 17px;
@@ -502,6 +549,21 @@ nav ul a.active{
 }
 .portfolio-content .port .links a:hover{
     background-color: var(--main-color);
+}
+
+.portfolio-content .port.hide{
+    display: none;
+}
+.portfolio-content .port.show{
+    animation: animate 0.4s ease;
+}
+@keyframes animate {
+    0%{
+      transform: scale(0.5);
+    }
+    100%{
+      transform: scale(1);
+    }
 }
 /* End Portfolio */
 /* Start contact */

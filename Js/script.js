@@ -27,11 +27,6 @@ window.addEventListener('scroll', function(){
 let barIcone = document.querySelector('.bar');
 barIcone.addEventListener("click", function(){
     header.classList.toggle('active');
-    // if(barIcone.innerHTML == "x"){
-    //     barIcone.innerHTML = f0c9;
-    // }else if(barIcone.innerHTML == f0c9){
-    //     barIcone.innerHTML == "x";
-    // }
 });
 
 // clicked to top
@@ -111,4 +106,31 @@ window.onscroll = function(){
         });
 
     };
+}
+
+// Filter Projects
+
+const items = document.querySelector('#Portfolio .items'),
+Projects = document.querySelectorAll('.portfolio-content .port');
+
+items.onclick =  (item)=>{
+
+    if(item.target.classList.contains('item')){
+        items.querySelector('.active').classList.remove('active');
+        item.target.classList.add('active');
+
+        Projects.forEach(project =>{
+            if(item.target.getAttribute('data-name') == project.getAttribute('data-name') || item.target.getAttribute('data-name') == 'all'){
+                project.classList.remove("show");
+                project.classList.remove('hide');
+                setTimeout(() => {
+                    project.classList.add('show');
+                }, .1);
+            }else{
+                project.classList.add("hide");
+                project.classList.remove("show");
+            }
+    
+        });
+    }
 }
