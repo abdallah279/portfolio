@@ -275,9 +275,7 @@ nav ul a.active{
     overflow: hidden;
 } 
 .about-content .image img{
-    max-width: 100%;
-    height: 400px;
-    transform: scale(1.2);
+    width: 400px;
 }
 @media (max-width: 991px) {
     .about-content{
@@ -439,13 +437,11 @@ nav ul a.active{
 }
 .portfolio .items{
     display: flex;
-    max-width: 460px;
-    width: 100%;
-    justify-content: space-between;
+    gap: 10px;
 }
 .portfolio .items span{
-    padding: 7px 25px;
-    font-size: 18px;
+    padding: 9px 25px;
+    font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     color: var(--main-color);
@@ -457,6 +453,10 @@ nav ul a.active{
 .portfolio .items span:hover{
     color: #fff;
     background: var(--main-color);
+}
+
+.w-100{
+    width: 100% !important;
 }
 
 @media screen and (max-width:500px) {
@@ -487,6 +487,7 @@ nav ul a.active{
 .portfolio-content .port{
     position: relative;
     overflow: hidden;
+    border: 1px solid #cccccc45;
 }
 .portfolio-content .port::before{
     content: '';
@@ -512,9 +513,9 @@ nav ul a.active{
     top: -20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 17px;
+    font-size: 15px;
     background-color: var(--sc-color);
-    padding: 8px 12px;
+    padding: 10px 12px;
     transition: all .3s;
     border-radius: 5px;
     z-index: 4;
@@ -536,10 +537,10 @@ nav ul a.active{
     bottom: 0;
 }
 .portfolio-content .port .links a{
-    font-size: 22px;
+    font-size: 18px;
     color: #fff;
     width: 50%;
-    padding: 8px 0;
+    padding: 11px 0;
     transition: all .3s;
     background-color: rgba(20, 157, 221, 0.75);
     text-align: center;
