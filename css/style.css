@@ -83,6 +83,21 @@ a{
 .title p{
     line-height: 1.5;
 }
+
+.button_m{
+    padding: 12px 32px;
+    background: var(--main-color);
+    color: #fff;
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+    transition: .3s;
+    cursor: pointer;
+}
+.button_m:hover{
+    background-color: transparent;
+    color: var(--main-color);
+}
+
 .bar,
 .up{
     background-color: var(--main-color);
@@ -194,8 +209,10 @@ nav ul a.active{
 /* End Header */
 /* Start Home Section */
 .home{
-    background-image: url(../imgs/pexels-pixabay-52732.jpg);
+    background-image: url(../imgs/Gemini2.png);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
     position: relative;
@@ -207,7 +224,7 @@ nav ul a.active{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .7);
 }
 .home .home-content{
     position: absolute;
@@ -227,7 +244,7 @@ nav ul a.active{
 .home-content p{
     font-size: 15px;
     color: #eee;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-family: "Poppins", sans-serif;
 }
 .home-content .go-down{
@@ -506,6 +523,9 @@ nav ul a.active{
 }
 .portfolio-content .port img{
     max-width: 100%;
+    height: 210px;
+    transition: all ease-in-out 0.3s;
+    object-fit: cover;
 }
 .portfolio-content .port .content{
     color: #fff;
