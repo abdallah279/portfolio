@@ -561,9 +561,14 @@
 
     .code-float:nth-child(4) {
       top: 50%;
-      right: -18%;
+      right: -30%;
       animation-delay: 2s;
       color: var(--accent2);
+      /* z-index: 2; */
+    }
+
+    .code-float.top{
+      top: 10%;
     }
 
     @keyframes float {
@@ -862,7 +867,7 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: border-color .3s, transform .3s, box-shadow .3s;
+      transition: all .3s ease-in-out;
       cursor: pointer;
     }
 
@@ -1450,7 +1455,7 @@
           </svg>
         </div>
         <div class="code-float">&lt;const&gt; dev = "frontend"</div>
-        <div class="code-float">npm run build ✓</div>
+        <div class="code-float top">npm run build ✓</div>
         <div class="code-float">useState(💡)</div>
       </div>
     </div>
