@@ -40,6 +40,7 @@
 
     [data-theme="light"] {
       --bg: #f4f5f7;
+      --accent: #bac7c4;
       --surface: #ffffff;
       --surface2: #edf0f5;
       --border: rgba(0, 0, 0, .08);
@@ -338,6 +339,9 @@
     .hero-content {
       position: relative;
       z-index: 2;
+      @media (max-width: 768px) {
+        margin-top: 2rem;
+      }
     }
 
     .hero-badge {
@@ -612,7 +616,13 @@
 
     .about-image-wrap {
       position: relative;
+
+      @media (max-width: 768px) {
+        width: 100% !important;
+      }
     }
+
+
 
     .about-image-inner {
       width: 100%;
@@ -636,6 +646,10 @@
       font-size: .78rem;
       line-height: 1.9;
       overflow: hidden;
+
+      @media (max-width: 768px) {
+        padding: 1rem .5rem;
+      }
     }
 
     .code-line {
@@ -659,7 +673,8 @@
     }
 
     .str {
-      color: #c3e88d;
+      /* color: #c3e88d; */
+      color: var(--accent);
     }
 
     .num {
@@ -684,6 +699,10 @@
       padding: 1rem 1.4rem;
       border-radius: var(--radius);
       text-align: center;
+
+      @media (max-width: 768px) {
+        bottom: -50px;
+      }
     }
 
     .about-corner-badge .big {
@@ -1348,7 +1367,11 @@
         Available for opportunities
       </div>
       <h1 class="hero-name reveal reveal-delay-1">ABDALLAH<br><span>ZAKARIA</span></h1>
-      <p class="hero-title reveal reveal-delay-2"><strong>Frontend Developer</strong> &nbsp;/&nbsp; Vue & Nuxt & React</p>
+      <p class="hero-title reveal reveal-delay-2"><strong style="@media (max-width: 768px) {
+        width: 100%;
+        display: block;
+        text-align: center;
+      }">Frontend Developer</strong> &nbsp;/&nbsp; Vue & Nuxt & React</p>
       <p class="hero-desc reveal reveal-delay-3">
         Highly motivated and results-oriented Front-End Developer with 3 years of professional
         experience designing, developing, and deploying dynamic and responsive user interfaces.
