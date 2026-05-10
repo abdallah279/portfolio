@@ -423,6 +423,11 @@
       margin-top: 3rem;
       padding-top: 2rem;
       border-top: 1px solid var(--border);
+
+      @media (max-width: 768px) {
+        gap: 1rem;
+        justify-content: space-between !important;
+      }
     }
 
     .stat-num {
@@ -617,6 +622,10 @@
       position: relative;
       background: var(--surface2);
       border: 1px solid var(--border);
+
+      @media (max-width: 768px) {
+        aspect-ratio: auto;
+      }
     }
 
     .about-code-window {
@@ -701,6 +710,11 @@
       flex-wrap: wrap;
       gap: .6rem;
       margin-top: 1.8rem;
+
+      @media (max-width: 768px) {
+        gap: .4rem;
+        margin-top: 1rem;
+      }
     }
 
     .tag {
@@ -726,6 +740,10 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 1rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
     }
 
     .skill-card {
@@ -737,6 +755,10 @@
       overflow: hidden;
       cursor: default;
       transition: border-color .25s, transform .25s, box-shadow .25s;
+
+      @media (max-width: 768px) {
+        padding: 1rem;
+      }
     }
 
     .skill-card::before {
@@ -942,6 +964,10 @@
       padding-left: 2.5rem;
       padding-bottom: 3rem;
       position: relative;
+
+      @media (max-width: 768px) {
+        padding-left: 1.5rem;
+      }
     }
 
     .timeline-item:last-child {
@@ -1027,6 +1053,10 @@
       display: grid;
       grid-template-columns: 1fr 1.2fr;
       gap: 5rem;
+
+      @media (max-width: 768px) {
+        gap: 2rem;
+      }
     }
 
     .contact-info {}
@@ -1036,6 +1066,10 @@
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
       margin-top: 2rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     .contact-link {
@@ -1198,6 +1232,9 @@
       color: var(--muted);
       letter-spacing: .1em;
       transition: color .2s;
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
     }
 
     .mobile-nav a:hover {
@@ -1460,8 +1497,8 @@
           <span class="tag">Vue</span>
           <span class="tag">Nuxt</span>
           <span class="tag">JavaScript</span>
-          <span class="tag">Tailwind CSS</span>
           <span class="tag">Bootstrap</span>
+          <span class="tag">Tailwind CSS</span>
           <span class="tag">HTML & CSS</span>
           <span class="tag">Sass</span>
           <span class="tag">Git</span>
@@ -2184,7 +2221,7 @@
   <!-- Footer -->
   <footer>
     <div>© 2026 <a href="#hero">Abdallah Zakaria</a> — Frontend Developer · Mansoura, Egypt</div>
-    <div style="display:flex;gap:1.5rem;align-items:center;">
+    <div style="display:flex;gap:1rem 1.5rem;align-items:center;flex-wrap:wrap;">
       <a href="https://www.facebook.com/profile.php?id=100005425246808" target="_blank"
         style="color:var(--muted);font-size:.8rem;transition:color .2s;" onmouseover="this.style.color='var(--accent)'"
         onmouseout="this.style.color='var(--muted)'" title="Facebook">Facebook</a>
